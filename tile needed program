@@ -1,0 +1,35 @@
+# Get user input for the number of tiles
+num_tiles = int(input("Enter the number of tile sizes: "))
+
+# Initialize an empty list to store tile sizes
+tiles = []
+
+# Get user input for each tile size
+for i in range(num_tiles): 
+    tile_size = int(input("Enter a tile size: "))
+    tiles.append(tile_size)
+
+# Get user input for the space to be covered
+space_to_be_covered = int(input("Enter the space to be covered: "))
+
+# Sort tiles in descending order to use the largest tiles first
+tiles = sorted(tiles, reverse=True)
+
+# Initialize an empty list to store the tiles needed
+result = []
+
+# Initialize remaining space to be covered
+remaining_space = space_to_be_covered
+
+# Iterate through the sorted tiles
+for tile in tiles:
+    # While we can fit this tile into the remaining space
+    while remaining_space >= tile:
+        result.append(tile)
+        remaining_space -= tile
+
+# Print the results
+print("Tiles needed:", result)
+print("Spaces to be covered:", space_to_be_covered)
+
+        
