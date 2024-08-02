@@ -1,0 +1,363 @@
+'''num=int(input("enter a num:"))
+original_num= num
+rev=0
+while num>0:
+    rem=num%10
+    rev=rev*10+rem
+    num=num//10
+if original_num==rev:
+    print("palindrome")
+else:
+    print("not a palindrome")
+
+# rev a palindrome string
+
+s = input("Enter a string: ") 
+reversed_s = s[::-1]  
+print("The reversed string is:",reversed_s)
+if(s== reversed_s):
+    print("palindrome")
+else:
+    print("not a palindrome")
+
+# rev a number
+    
+s=input("enter a num:")
+rev_s=s[::-1]
+print(rev_s)
+
+# LENGTH OF A STRING WITHOUT USING STR(LEN) FUNCTION
+s= input("enter a string:")
+length=0;
+for i in s:
+    length+=1
+print("length of the string",length)
+
+#LENGTH OF A STRING USING LEN FUNCTION
+
+s = input("Enter a string: ")
+length = len(s)
+length_str = str(length)
+print("Length of the string is:", length_str)
+
+
+n1=int(input("enter a num:"))
+n2=int(input("enter a num:"))
+n3=int(input("enter a num:"))
+if n1>n2 and n1>n3:
+    print("n1 is greater")
+elif n2>n1 and n2>n3:
+    print("n2 is greater")
+else:
+    print("n3 is greater")
+
+
+num=int(input("enter a num:"))
+original_num=num
+dig=0
+while num>0:
+    rem=num%10
+    dig=dig+rem*rem*rem
+    num=num//10
+if original_num==dig:
+    print("armstrong")
+else:
+    print("not an armstrong ")
+
+
+# rev a string
+s = input("Enter a string: ") 
+reversed_s = s[::-1]  
+print("The reversed string is:",reversed_s)
+
+
+#factorial
+num=int(input("enter a num:"))
+fact=1
+for i in range(1,num+1):
+    fact*=i
+    print("factorial",fact)
+
+#factors
+num = int(input("Enter a number: "))
+print(f"The factors of {num} are:")
+for i in range(1, num + 1):
+    if num % i == 0:
+        print(i)
+
+#prime or composite
+a=int(input("enter the number"))
+count=0;
+for i in range(1,a+1):
+    if(a%i==0):
+        count+=1;
+if(count==1):
+    print("neither prime nor composite")
+elif(count==2):
+    print("prime")
+else:
+    print("composite")
+
+#prime with range
+a=int(input("Lower Limit = "))
+b=int(input("Upper Limit = "))
+for i in range(a,b+1):
+    count=0;
+    for j in range(1,i+1):
+        if(i%j==0):
+            count+=1;
+    if(count==2):
+        print(i)'''
+
+#fibbonacci
+n1,n2=0,1;
+num=int(input("enter a num:"))
+for i in range(1,num+1):
+    print(n1);
+    n3=n1+n2;
+    n1=n2;
+    n2=n3;
+
+
+#fibbonacci
+n1,n2=0,1:
+a=int(input("enter a number:")):
+if(a>=1):
+    print(n1);
+if(a>=2):
+    print(n2);
+if(a>=3):
+    for i in range(3,a+1):
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+        print(n3);
+if(a==1):
+    print("nth num in fibbo series:",n1)
+
+elif(a==2):
+    print("nth num in fibbo series:",n2)
+else:
+    print("nth num in fibbo series:",n3)
+
+
+#GCD
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+if num1 < num2:
+    num1, num2 = num2, num1    
+while num2 != 0:
+    num1, num2 = num2, num1 % num2
+    print("The GCD of", num1, "and", num2, "is:", num1))
+
+
+# FUNCTIONS
+
+'''def square(x):
+    result=x*x
+    print(result)
+square(6)'''
+
+
+'''def func(a,b):
+    result=a*b
+    print(result)
+func(4,7) '''
+
+'''
+def greet(x,y="hello"):
+    if(x=="Alice" and y=="hello"):
+        print("hello alice")
+    else:
+        print(x,y)
+greet("Alice")
+greet("bob","hi")'''
+
+'''
+def num(x):
+    if(x%2==0):
+        return True
+    else:
+        return False
+print(num(3)) '''
+
+'''
+def sum_list(x,y,z):
+    result=x+y+z
+    print(result)
+sum_list(2,3,4)
+'''
+
+''' average
+
+def sum_list(n):
+    sum=0
+    for i in n:
+        sum=sum+i
+    print(sum/len(n)) #WITH LEN FUNC
+l=[10,20,30,40,50]
+sum_list(l)
+         OR
+def sum_list(n):
+    sum=0
+    count=0
+    for i in n:
+        sum=sum+i
+        count=count+1 #WITHOUT LEN FUNC
+    print(sum/count)
+l=[10,20,30,40,50]
+sum_list(l)
+'''
+
+'''
+def ft(n):
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    print(fact)
+ft(5)
+'''
+
+# REFER LAMBDA FUNCTION IN W3 SCHOOLS FOR PYTHON
+#ARRAYS CONCEPT
+
+cars = ["Ford", "Volvo", "BMW"]
+companies=cars.copy()
+companies.append("Honda")
+companies.pop(1)
+companies.remove("Honda")
+print(companies.count("BMW"))
+companies.extend(cars)
+companies.insert(1,"supra")
+companies.reverse()
+companies.sort()
+print(companies.index("BMW"))
+print (cars)
+print(companies)
+
+
+#largest num
+'''
+arr=[2,7,9,4,5,2]
+arr.sort()
+print(arr)
+lar_num=arr[-1]
+print(lar_num)
+'''
+
+#sum of array
+'''
+def arr():
+    arr=[2,7,9,4,5,2]
+    result=sum(arr)
+    return result
+print(arr())
+'''
+
+
+#2nd argest num without duplicates
+
+arr=[2,7,9,9,4,5,2]
+arr.sort()
+print(arr)
+x=len(arr)-1
+y=arr.count(arr[x])
+print(arr[x-y])
+#o/p-7
+
+# 2nd lar num with duplicate
+#o/p-9
+def arr():
+    arr=[1,6,9,9,7,8,5,4]
+    arr.sort()
+    return arr
+sort_arr=arr()
+sec_lar=sortarr[-2]
+print(sort_arr)
+print(sec_lar)
+
+# reverse an array
+arr=[1,2,3]
+arr.reverse()
+print(arr)
+
+
+#rev an array without reverse()
+a=[1,2,3]
+arr=a[::-1]
+print(arr)
+
+#remove duplicates in an array
+
+arr=[1,2,2,3]
+res=[]
+for i in arr:
+    if i not in res:
+        res.append(i)
+print(res)
+
+#with set(remove duplicates in an array)
+arr=[1,2,2,3]
+res=list(set(arr))
+print(res)
+
+#check array is sorted or not
+arr=[1,8,4]
+sort_arr=arr.sort()
+if arr==sort_arr:
+    print("sorted")
+else:
+    print("not sorted")
+
+
+arr1=[1,2,3,4,4]
+arr2=[2,3,4,5,6]
+arr3=[]
+for i in arr1:
+    for j in arr2:
+        if(i==j):
+            arr3.append(i)
+print(arr3)#o/p-[2,3,4,4]
+
+
+#rotation of array
+
+arr=[1,2,3,4,5]
+rotate = 5
+for i in range(rotate):
+    rotated_arr = arr[-1:] + arr[:-1]
+    arr = rotated_arr
+    print(rotated_arr)
+
+o/p--[5, 1, 2, 3, 4]
+     [4, 5, 1, 2, 3]
+     [3, 4, 5, 1, 2]
+     [2, 3, 4, 5, 1]
+     [1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        
