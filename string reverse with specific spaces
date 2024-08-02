@@ -1,0 +1,40 @@
+n= input("enter a string:")
+rev_s=n[::-1]
+print(rev_s)
+
+
+''' rev with spaces'''
+
+n= input("enter a string:")
+reve_s=""
+word=""
+for char in n:
+    if char !='':
+        word=char+word
+    else:
+        reve_s+=word+''
+        word=""
+reve_s+=word
+print(reve_s)
+
+
+
+enter a string:sky is blue
+eulb si yks
+
+
+logic:
+For the input string "sky is blue":
+
+When processing "sky", word becomes "yks" (reversed).
+On encountering the space after "sky", "yks " is added to reversed_string.
+Reset word to an empty string and start reversing the next word "is".
+Continue this process until the entire string is processed.
+
+Loop Through Characters: This loop iterates over each character in the input string s.
+Check for Non-Space Characters:
+If char is not a space, it adds char to the beginning of word, effectively reversing the order of characters as they are encountered.
+Space Handling:
+When a space is encountered, it means the end of a word has been reached:
+Append Reversed Word: The reversed word (built so far) is added to reversed_string, followed by a space to preserve the original spacing.
+Reset word: The word variable is reset to an empty string to start building the next word.
