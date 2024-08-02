@@ -12,10 +12,10 @@ for char in n:  '''iterating each char in string n'''
     if char !='':  ''' if char is not equal to spaces then add the word to char'''
         word=char+word
     else:
-        reve_s+=word+''
-        word=""
+        reve_s+=word+''    ''' reveresed word will be stored in the reve_s'''
+        word=""             ''' the angain the word becomes an empty string'''
 reve_s+=word
-print(reve_s)
+print(reve_s)''' printing the entire rev string'''
 
 
 
