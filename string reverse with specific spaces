@@ -8,8 +8,8 @@ print(rev_s)
 n= input("enter a string:")
 reve_s=""
 word=""
-for char in n:
-    if char !='':
+for char in n:  '''iterating each char in string n'''
+    if char !='':  ''' if char is not equal to spaces then add the word to char'''
         word=char+word
     else:
         reve_s+=word+''
