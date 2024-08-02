@@ -1,0 +1,55 @@
+s= input("enter a string:")
+char_count={}  #creating a dictionary for keeping track of counting the occurences of character
+for i in s:
+    if i in char_count:
+        char_count[i]+=1
+    else:
+        char_count[i]=1
+non_dupli=""
+dupli=""
+for i in s:
+    if char_count[i]==1:
+        non_dupli+=i
+    elif char_count[i] > 1:
+        if i not in dupli:  # To avoid adding the same duplicate character multiple times
+            dupli += i
+print(non_dupli)
+print(dupli)
+
+
+
+enter a string:abcdefabc
+def
+
+
+
+logic:
+Get User Input:
+
+The code starts by asking the user to enter a string (a sequence of characters) and stores that string in a variable called s.
+Count Character Occurrences:
+
+The code then sets up an empty dictionary called char_count. This dictionary will keep track of how many times each character appears in the string.
+It goes through each character in the string s. If the character is already in the dictionary, it increases its count by 1. If the character is not yet in the dictionary, it adds it with a count of 1.
+Find Non-Duplicate Characters:
+
+After counting all characters, the code sets up an empty string called non_duplicate_chars. This will store characters that appear only once in the original string.
+It goes through the original string s again. For each character, it checks if its count in the char_count dictionary is exactly 1 (meaning it appears only once). If so, it adds this character to non_duplicate_chars.
+Print the Result:
+
+Finally, the code prints out the non_duplicate_chars string, which contains all characters from the original string that appeared only once.
+Example:
+
+Let's say the user enters "aabac".
+
+Counting Characters:
+
+'a' appears 3 times.
+'b' appears 1 time.
+'c' appears 1 time.
+Finding Non-Duplicates:
+
+Characters 'b' and 'c' appear exactly once.
+Result:
+
+The output will be "bc" because these are the characters that appeared only once in the input string.
