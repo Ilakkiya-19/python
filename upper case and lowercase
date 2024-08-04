@@ -1,0 +1,17 @@
+user_word = input("enter a word:")
+for letter in user_word:
+    user_word = user_word.upper()
+    print(user_word)
+
+
+
+
+user_word = input("Enter a word: ")
+modified_word = ""
+for letter in user_word:
+    if letter.islower():
+        modified_word += letter.upper()
+    else:
+        modified_word += letter.lower()
+
+print("Modified word:", modified_word)
